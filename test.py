@@ -1,7 +1,7 @@
 import unittest
 import math
 import time
-from calc_1 import Calculator, ParserError, EvaluationError
+from calc import Calculator, ParserError, EvaluationError
 
 class TestCalculator(unittest.TestCase):
     def setUp(self):
