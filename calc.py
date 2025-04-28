@@ -194,6 +194,8 @@ class Evaluator:
                 return left / right
             elif node.op == '^':
                 try:
+                    if left < 0 and not right.is_integer():
+                        raise EvaluationError("Negative number cannot be raised to a fractional power")
                     result = left ** right
                     if abs(result) == float('inf'):
                         raise EvaluationError("Numerical overflow")
